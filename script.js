@@ -1,4 +1,6 @@
 const startBtn = document.getElementById("start-button");
+const startSound = document.getElementById("start-sound");
+const clickSound = document.getElementById("click-sound");
 const quizScreen = document.getElementById("quiz-screen");
 const titleScreen = document.getElementById("title-screen");
 const resultScreen = document.getElementById("result-screen");
@@ -96,6 +98,7 @@ let currentQuestion = 0;
 let answers = [];
 
 startBtn.addEventListener("click", () => {
+  startSound.play();  // 🔊 Play start sound
   titleScreen.classList.add("hidden");
   quizScreen.classList.remove("hidden");
   showQuestion();
@@ -139,6 +142,7 @@ function showQuestion() {
     btn.classList.add("answer-button");
 
     btn.addEventListener("click", () => {
+      clickSound.play();  // 🔊 Play click sound
       // Remove .selected from all buttons in this question
       const allButtons = answersWrapper.querySelectorAll(".answer-button");
       allButtons.forEach(b => b.classList.remove("selected"));
