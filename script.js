@@ -141,7 +141,7 @@ function showQuestion() {
   qEl.textContent = q.text;
   questionContainer.appendChild(qEl);
 
-  // ✅ Container for stacking answers
+  // Create container for answers
   const answersWrapper = document.createElement("div");
   answersWrapper.classList.add("answer-container");
 
@@ -151,14 +151,16 @@ function showQuestion() {
     btn.classList.add("answer-button");
 
     btn.addEventListener("click", () => {
-      clickSound.play();
+      // Play click sound
+      if (clickSound) clickSound.play();
 
-      // Deselect all first
+      // Highlight selection
       const allButtons = answersWrapper.querySelectorAll(".answer-button");
       allButtons.forEach(b => b.classList.remove("selected"));
 
-      // Select this one
       btn.classList.add("selected");
+
+      // Record the answer and reveal Next button
       answers[currentQuestion] = opt.label;
       nextBtn.classList.remove("hidden");
     });
