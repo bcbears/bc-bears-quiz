@@ -151,18 +151,15 @@ function showQuestion() {
     btn.classList.add("answer-button");
 
     btn.addEventListener("click", () => {
-      clickSound.play();  // 🔊 Play click sound
-      // Remove .selected from all buttons in this question
-      const allButtons = answersWrapper.querySelectorAll(".answer-button");
-      allButtons.forEach(b => b.classList.remove("selected"));
+  clickSound.play();
 
-      // Add .selected to the clicked one
-      btn.classList.add("selected");
+  const allButtons = answersWrapper.querySelectorAll(".answer-button");
+  allButtons.forEach(b => b.classList.remove("selected"));
 
-      // Track selected answer
-      answers[currentQuestion] = opt.label;
-      nextBtn.classList.remove("hidden");
-    });
+  btn.classList.add("selected");
+  answers[currentQuestion] = opt.label;
+  nextBtn.classList.remove("hidden");
+});
 
     answersWrapper.appendChild(btn);
   });
