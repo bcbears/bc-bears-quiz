@@ -141,7 +141,7 @@ function showQuestion() {
   qEl.textContent = q.text;
   questionContainer.appendChild(qEl);
 
-  // ✅ Create a wrapper for stacked answer buttons
+  // ✅ Container for stacking answers
   const answersWrapper = document.createElement("div");
   answersWrapper.classList.add("answer-container");
 
@@ -151,15 +151,17 @@ function showQuestion() {
     btn.classList.add("answer-button");
 
     btn.addEventListener("click", () => {
-  clickSound.play();
+      clickSound.play();
 
-  const allButtons = answersWrapper.querySelectorAll(".answer-button");
-  allButtons.forEach(b => b.classList.remove("selected"));
+      // Deselect all first
+      const allButtons = answersWrapper.querySelectorAll(".answer-button");
+      allButtons.forEach(b => b.classList.remove("selected"));
 
-  btn.classList.add("selected");
-  answers[currentQuestion] = opt.label;
-  nextBtn.classList.remove("hidden");
-});
+      // Select this one
+      btn.classList.add("selected");
+      answers[currentQuestion] = opt.label;
+      nextBtn.classList.remove("hidden");
+    });
 
     answersWrapper.appendChild(btn);
   });
