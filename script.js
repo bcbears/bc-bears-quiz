@@ -98,7 +98,12 @@ let currentQuestion = 0;
 let answers = [];
 
 startBtn.addEventListener("click", () => {
-  startSound.play();  // 🔊 Play start sound
+  try {
+    startSound.play();
+  } catch (e) {
+    console.warn("Start sound failed:", e);
+  }
+
   titleScreen.classList.add("hidden");
   quizScreen.classList.remove("hidden");
   showQuestion();
