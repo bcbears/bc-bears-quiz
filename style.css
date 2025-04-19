@@ -19,14 +19,14 @@ body {
 .title, h2 {
   color: #00ffff;
   text-shadow: none;
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin-bottom: 16px;
 }
 .subtitle, p {
   color: #ffffff;
   text-shadow: none;
   margin-top: 20px;
-  font-size: 0.85rem;
+  font-size: 1.6rem;
 }
 button {
   display: flex;
@@ -36,9 +36,9 @@ button {
   width: 100%;
   max-width: 700px;
   min-height: 70px;
-  line-height: 1.2;
+  line-height: 1.5;
   padding: 14px 16px;
-  font-size: 0.75rem;
+  font-size: 1.6rem;
   background-color: #001f3f;
   color: #ffd700;
   border: 2px solid #39ff14;
@@ -160,13 +160,13 @@ button:hover {
     padding: 0 8px;
   }
   .title, h2 {
-    font-size: 0.85rem;
+    font-size: 1.5rem;
   }
   .subtitle, p {
-    font-size: 0.7rem;
+    font-size: 1.2rem;
   }
   .answer-button {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     padding: 10px 12px;
     min-height: 60px;
   }
@@ -179,7 +179,7 @@ button:hover {
     height: auto;
   }
   #next-button {
-    font-size: 0.7rem;
+    font-size: 1rem;
     padding: 12px;
   }
 }
