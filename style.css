@@ -19,7 +19,7 @@ body {
 .title, h2 {
   color: #00ffff;
   text-shadow: none;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   margin-bottom: 16px;
 }
 .subtitle, p {
@@ -108,10 +108,10 @@ button:hover {
   width: 100%;
   max-width: 700px;
   min-height: 70px;
-  line-height: 1.2;
+  line-height: 1.5;
   margin: 16px auto;
   padding: 14px 16px;
-  font-size: 0.75rem;
+  font-size: 1rem;
   background-color: #001f3f;
   color: #ffd700;
   border: 2px solid #39ff14;
@@ -166,7 +166,7 @@ button:hover {
     font-size: 0.7rem;
   }
   .answer-button {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     padding: 10px 12px;
     min-height: 60px;
   }
