@@ -97,16 +97,20 @@ const results = {
 let currentQuestion = 0;
 let answers = [];
 
-startBtn.addEventListener("click", () => {
-  try {
-    startSound.play();
-  } catch (e) {
-    console.warn("Start sound failed:", e);
-  }
-
+startBtn.addEventListener("click", function () {
   titleScreen.classList.add("hidden");
   quizScreen.classList.remove("hidden");
   showQuestion();
+
+  // Defer sound slightly to avoid blocking rendering
+  setTimeout(() => {
+    const sound = document.getElementById("start-sound");
+    if (sound) {
+      sound.play().catch(err => {
+        console.warn("Start sound blocked:", err);
+      });
+    }
+  }, 100);
 });
 
 nextBtn.addEventListener("click", () => {
