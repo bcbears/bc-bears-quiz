@@ -20,7 +20,7 @@ const questions = [
   {
     text: "What’s your game-day energy like?",
     options: [
-      { label: "A", text: "🧠📣I'm the breain of the squad — calling the shots!" },
+      { label: "A", text: "🧠📣I'm the brain of the squad — calling the shots!" },
       { label: "B", text: "⚡🏃Fast and fierce — nobody's catching you" },
       { label: "C", text: "👐✨Always ready for that epic catch" },
       { label: "D", text: "💪🛡No one's getting past me — blocking like a boss" },
