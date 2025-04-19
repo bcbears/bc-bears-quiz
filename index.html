@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BC Bears Football Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Title Screen -->
+  <div id="title-screen" class="screen">
+    <div id="logo-container">
+      <img id="bc-logo" src="bc-bears-logo.png" alt="BC Bears Logo" />
+    </div>
+    <h1 class="title">🏈 BC Bears Football Quiz</h1>
+    <p class="subtitle">⚡ Find out which football role matches your vibe ⚡</p>
+    <button id="start-button">START</button>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quiz-screen" class="screen hidden">
+    <div id="question-image-container">
+      <img id="question-image" src="" alt="Quiz question image" class="question-image" />
+    </div>
+    <div id="question-container"></div>
+    <button id="next-button" class="hidden">NEXT</button>
+  </div>
+
+  <!-- Result Screen -->
+  <div id="result-screen" class="screen hidden">
+  <h2 id="result-title"></h2>
+  <div id="result-image-container" class="result-image-container"></div>
+  <p id="result-description"></p>
+  <button id="restart-button">RESTART</button>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
