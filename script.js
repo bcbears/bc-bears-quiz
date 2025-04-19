@@ -1,6 +1,7 @@
 const startBtn = document.getElementById("start-button");
 const startSound = document.getElementById("start-sound");
 const clickSound = document.getElementById("click-sound");
+const resultSound = document.getElementById("result-sound");
 const quizScreen = document.getElementById("quiz-screen");
 const titleScreen = document.getElementById("title-screen");
 const resultScreen = document.getElementById("result-screen");
